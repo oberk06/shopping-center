@@ -184,30 +184,3 @@ function sepetfiyathesapla() {
   // localStorage.setItem("rakam",JSON.stringify(miktar.textContent))
 }
 
-// function refresh() {
-//   window.addEventListener("load", () => {
-//     sepeticonadet.textContent = JSON.parse(
-//       localStorage.getItem("sepeticonadet")
-//     );
-//     toplamfiyat.textContent = JSON.parse(localStorage.getItem("toplamfiyat"));
-
-//     resimdizi.forEach((item) => {
-//       const canvasRow = document.createElement("div");
-//       canvasRow.classList.add("row", "canvasrow");
-
-//       const canvasColumn = document.createElement("div");
-//       canvasColumn.classList.add("col-md-3");
-
-//       const image = document.createElement("img");
-//       image.classList.add("canvasresim");
-//       image.src = item;
-//       image.alt = "";
-
-//       canvasColumn.appendChild(image);
-//       canvasRow.appendChild(canvasColumn);
-//       canvasbody.appendChild(canvasRow);
-//     });
-
-//   });
-// }
-// refresh();
