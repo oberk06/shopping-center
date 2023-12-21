@@ -51,11 +51,7 @@ function domayaz(data) {
     apidiv.appendChild(cards);
   });
 
-  
-
   const butonlar = document.querySelectorAll(".btn");
-
-  
 
   butonlar.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -66,8 +62,6 @@ function domayaz(data) {
         "sepeticonadet",
         JSON.stringify(sepeticonadet.textContent)
       );
-
-     
 
       let resimfor = e.target.closest(".card").querySelectorAll("img");
 
@@ -118,16 +112,15 @@ function domayaz(data) {
         e.target.closest(".card").querySelector(".fiyat").textContent
       );
 
-      sepetadetkontrol(sepettekiler, item, fiyat,resimdizi);
+      sepetadetkontrol(sepettekiler, item, fiyat, resimdizi);
       sepetfiyathesapla(e, sepettekiler);
-      refresh(sepettekiler,resimdizi);
-      
+      // refresh(sepettekiler, resimdizi);
     });
   });
 }
 
 // ! Sepetin İçinde Ürün Artırıp Azaltma
-function sepetadetkontrol(sepettekiler, item, resimdizi ,fiyat) {
+function sepetadetkontrol(sepettekiler, item, resimdizi, fiyat) {
   let canvasrow = sepettekiler.querySelector(".canvasrow");
   let canvasadet = canvasrow.querySelector(".rakam");
 
@@ -153,20 +146,20 @@ function sepetadetkontrol(sepettekiler, item, resimdizi ,fiyat) {
     if (canvasadet.textContent < 1) {
       e.target.closest(".row").remove();
       item.disabled = false;
-      
-
-      
     }
 
     if (e.target.classList.contains("fa-trash")) {
       e.target.closest(".row").remove();
-      canvasadet.textContent = 0;
+      
       item.disabled = false;
-      sepeticonadet.textContent--;
+      let a=parseInt(e.target.closest(".canvasrow").querySelector(".rakam").textContent)
+    
+      sepeticonadet.textContent=parseInt(sepeticonadet.textContent)-a;
+      canvasadet.textContent = 0;
+      console.log(a);
       localStorage.setItem(
         "sepeticonadet",
-        JSON.stringify(sepeticonadet.textContent),
-        
+        JSON.stringify(sepeticonadet.textContent)
       );
     }
     sepetfiyathesapla();
