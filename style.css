@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  animation-name: in-circle-swoop;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  padding-top: 7vh;
+}
+
+.card {
+  height: 500px;
+  width: 19rem;
+  margin: 1rem;
+}
+
+#api {
+  /* height: 93vh; */
+  width: 100%;
+  height: auto;
+  margin: auto;
+  flex-wrap: wrap;
+}
+img {
+  height: 350px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+}
+#cart-alt-bölüm {
+  text-align: center;
+  bottom: 1rem;
+  position: absolute;
+}
+
+.dolar {
+  margin: 4rem;
+}
+
+.card-title {
+  text-align: center;
+  font-size: medium;
+  margin-top: 1rem;
+}
+.card-text {
+  font-size: 11px;
+}
+#notfound {
+  display: block;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+/* @keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(5000%);
+  }
+} */
+
+/* [transition-style="in:circle:hesitate"] {
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+} */
+
+.canvasresim {
+  height: 10vh;
+  width: auto;
+}
+.canvasrow {
+  height: auto;
+  width: auto;
+  margin: 0.5rem;
+}
+
+.kontrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  margin: 1rem;
+  margin-top: 0;
+}
